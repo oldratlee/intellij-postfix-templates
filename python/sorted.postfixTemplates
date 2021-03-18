@@ -1,0 +1,8 @@
+.sd : Sorted iterable
+	ANY   →   sorted($expr$)$END$
+
+.sdk : Sorted iterable with key
+	ANY   →   sorted($expr$, key=$key$)$END$
+
+.sdl : Sorted iterable with lambda key
+	ANY   →   sorted($expr$, key=lambda o: $key$)$END$
