@@ -1,3 +1,22 @@
+.list : list(expr)
+	ANY   →   list($expr$)
+
+.set : set(expr)
+	ANY   →   set($expr$)
+
+.str : str(expr)
+	ANY   →   str($expr$)
+
+.int : int(expr)
+	ANY   →   int($expr$)
+
+.bool : bool(expr)
+	ANY   →   bool($expr$)
+
+.with : with expr as name
+	ANY   →   with $expr$ as $name$:\
+    $END$
+
 .enumerate : Enumerate value
 	ANY   →   enumerate($expr$)
 
