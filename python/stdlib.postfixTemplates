@@ -1,3 +1,9 @@
+.minus : -expr
+	ANY   →   -$expr$
+
+.minusexpr : -(expr)
+	ANY   →   -($expr$)
+
 .list : list(expr)
 	ANY   →   list($expr$)
 
@@ -16,6 +22,9 @@
 .with : with expr as name
 	ANY   →   with $expr$ as $name$:\
     $END$
+
+.enumstart : Enumerate value with start
+	ANY   →   enumerate($expr$, start=$start$)
 
 .enumerate : Enumerate value
 	ANY   →   enumerate($expr$)
